@@ -16,6 +16,6 @@ ohl['gameid'] = erie['game_date'].astype(str) + erie['home_team'] + erie['away_t
 ottersplayers = ohl[ohl['team'] == 'Erie Otters']['player'].unique()
 
 def playershots(x):
-    player = ohl[(ohl['Player'] == x) & ((ohl['Event'] == 'Shot') | (ohl['Event'] == 'Goal'))]
-    return sb.displot(x= 'X Coordinate', y='Y Coordinate', data = ohl[player['Event'] == 'Goal'], kind='kde')
+    player = ohl[(ohl['player'] == x) & ((ohl['event'] == 'Shot') | (ohl['event'] == 'Goal'))]
+    return sb.kdeplot(x= 'x_coordinate', y='y_coordinate', data = ohl[player['event'] == 'Goal'], fill=True)
 
