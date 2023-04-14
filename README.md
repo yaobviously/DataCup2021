@@ -19,4 +19,4 @@ For the shots in the next ten events model, I used Mean Absolute Error and Poiss
 # Results
 All of the models performed well and yielded results consistent with what a hockey fan might expect. For instance, shots in front of the net were found to be most likely to result in a goal, and passes towards one's own net that weren't across the center of the ice were most likely to be completed. Additionally, the expected number of shots in the next 10 events increased substantially upon entering the opposing team's zone.
 
-My models compared favorably with those of several contest finalist's.  
+My models compared favorably with many contest entries.  
