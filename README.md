@@ -12,7 +12,9 @@ The OHL provided the data in the standard hockey play-by-play format. To augment
 In each case I began by fitting either a simple linear classifier (proba goal, proba pass) or linear regressor. Afterwards I tuned the appropriate xgboost models on the same features. SHAP was used to iteratively assess feature importance. 
 
 # Evaluation
-A confusion matrix and the receiver response characteristic were chosen to evaluate the classification models.  In both cases the gradient boosting tree significantly outperformed the linear classifier (see Notebooks). For the shots in the next ten events model I chose Mean Absolute Error and Poisson Deviance to assess model fit. 
+To evaluate the classification models, I used a confusion matrix and the receiver response characteristic. The gradient boosting tree outperformed the linear classifier significantly in both cases, as shown in the notebooks.
+
+For the shots in the next ten events model, I used Mean Absolute Error and Poisson Deviance to assess model fit. 
 
 # Results
 All of the models performed well and were in agreement with what a hockey fan might expect. The shots most likely to go in are in front of the net, the passes most likely to be completed are passes towards your own net that aren't across the center of the ice, and the expected number of shots in the next 10 events increases dramatically on a zone entry. Comparing my result with conteset submissions, I was able to achieve predictive accuracy for the goal model that was comparable to a finalist's entry.
