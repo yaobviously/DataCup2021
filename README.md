@@ -1,6 +1,6 @@
 # Data Cup 2021
 
-This repository contains code and data related to the OHL's Data Cup 2021 competition. I wasn't able to submit my entry, but I did do an analysis several months later while completing the Lambda/Bloomtech Data Science program.
+This repository contains code and data related to the OHL's Data Cup 2021 competition. I wasn't able to submit my entry, but I did do an analysis several months later while completing the Lambda/BloomTech Data Science program.
 
 # Overview
 I created three separate models to predict three outcomes relevant to hockey success: 1) The probability of a goal conditional on a shot; 2) The probability of a pass completion; 3) The expected number of shots in the next ten events. In the case of the passing model I also computed 'passes completed over expectation' for OHL players with large enough samples. 
