@@ -6,7 +6,7 @@ This repository contains code and data related to the OHL's Data Cup 2021 compet
 I created three separate models to predict three outcomes relevant to hockey success: 1) The probability of a goal conditional on a shot; 2) The probability of a pass completion; 3) The expected number of shots in the next ten events. In the case of the passing model I also computed 'passes completed over expectation' for OHL players with large enough samples. 
 
 # Data
-The data was provided by the OHL. It was in the standard hockey play-by-play format. I added several features for each model including the events n-steps back and forward, passing distance and angle, and other details like the interval between events. 
+The OHL provided the data in the standard hockey play-by-play format. To augment the data, I engineered additional features such as events n-steps back and forward, passing distance and angle, and the time interval between events.
 
 # Approach
 In each case I began by fitting either a simple linear classifier (proba goal, proba pass) or linear regressor. Afterwards I tuned the appropriate xgboost models on the same features. SHAP was used to iteratively assess feature importance. 
