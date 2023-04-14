@@ -17,4 +17,6 @@ To evaluate the classification models, I used a confusion matrix and the receive
 For the shots in the next ten events model, I used Mean Absolute Error and Poisson Deviance to assess model fit. 
 
 # Results
-All of the models performed well and were in agreement with what a hockey fan might expect. The shots most likely to go in are in front of the net, the passes most likely to be completed are passes towards your own net that aren't across the center of the ice, and the expected number of shots in the next 10 events increases dramatically on a zone entry. Comparing my result with conteset submissions, I was able to achieve predictive accuracy for the goal model that was comparable to a finalist's entry.
+All of the models performed well and yielded results consistent with what a hockey fan might expect. For instance, shots in front of the net were found to be most likely to result in a goal, and passes towards one's own net that weren't across the center of the ice were most likely to be completed. Additionally, the expected number of shots in the next 10 events increased substantially upon entering the opposing team's zone.
+
+My models compared favorably with those of several contest finalist's.  
