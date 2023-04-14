@@ -1,27 +1,18 @@
 # Data Cup 2021
 
-This repository contains code and data related to the NHL's Data Cup 2021 competition. I wasn't able to submit my entry, but I did do an analysis several months later
+This repository contains code and data related to the OHL's Data Cup 2021 competition. I wasn't able to submit my entry, but I did do an analysis several months later
 
-Table of Contents
 Overview
-Data
-Approach
-Evaluation
-Results
-Getting Started
-Contributing
-License
-Overview
-Provide a brief overview of the competition and the goal of your solution. Describe the approach you took and the results you achieved.
+I created three separate models to predict three outcomes relevant to hockey success: 1) The probability of a goal conditional on a shot; 2) The probability a pass will be completed; 3) The expected number of shots in the next ten events. In the case of the passing model I also computed 'passes completed over expectation' for the players in the dataset with large enough samples. 
 
 Data
-Describe the data used in the competition, including its format and any preprocessing you performed. If the data is too large to include in the repository, provide instructions on how to download it.
+The data was provided by the OHL. It was in the standard hockey play-by-play format. I added several features for each model including the events n-steps back and forward, passing distance and angle, and other details like the interval between events. 
 
 Approach
-Describe your approach to solving the problem, including any models or techniques you used. Provide code snippets or links to relevant files in the repository.
+In each case I began by fitting either a simple linear classifier (proba goal, proba pass) or linear regressor. Afterwards I tuned the appropriate xgboost models on the same features. SHAP was used to iteratively assess feature importance. 
 
 Evaluation
-Describe the evaluation metric used in the competition and how your solution performed. Provide a table or plot of the results.
+A confusion matrix and the receive response characteristic were chosen to evaluate the classification models. In both cases the gradient boosting trees significantly outperformed the linear classifier (see Notebooks). For the shots in the next ten events model I chose Mean Absolute Error and Poisson Deviance to assess model fit. 
 
 Results
 Summarize the results of your solution and highlight any key findings. Include any visualizations or tables that help to communicate your results.
